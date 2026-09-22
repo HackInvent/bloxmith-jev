@@ -1,0 +1,14 @@
+<div data-properties-surface="inspector" class="cw-block-inspector cw-jev-inspector" data-block-inspector-root data-block-runtime-refresh="autonomous" data-node-id="{{ node_id }}" data-node-type="{{ node_type }}">
+  <div class="inspector-selection {{ summary_hidden }}">
+    <div class="inspector-tabs"><button class="inspector-tab {{ general_active }}" data-inspector-tab="general" type="button" data-i18n="ui.block_kit.general">General</button><button class="inspector-tab {{ ports_active }} {{ ports_tab_hidden }}" data-inspector-tab="ports" type="button" {{ ports_tab_disabled }} data-i18n="ui.block_kit.ports">Ports</button></div>
+  </div>
+  <div class="inspector-view {{ general_hidden }}" data-inspector-panel-tab="general">
+    {{ settings }}
+    {{ questions }}
+    <div class="inspector-actions {{ actions_hidden }}"><button class="solid-btn" data-block-apply type="button" disabled data-i18n="ui.block_kit.apply">Apply</button><button class="ghost-btn {{ duplicate_hidden }}" data-block-action="duplicate" type="button" data-i18n="ui.block_kit.duplicate">Duplicate</button></div>
+  </div>
+  <div class="inspector-view {{ ports_hidden }}" data-inspector-panel-tab="ports">
+    <section class="ports-editor-section"><div class="ports-editor-header"><span data-i18n="ui.block_kit.inputs">Inputs</span><button class="ghost-btn {{ add_input_hidden }}" data-add-input-port type="button" {{ add_input_disabled }} data-i18n="ui.block_kit.add_input">+ Add an input</button></div><div class="ports-editor-list">{{ inputs_html }}</div></section>
+    <section class="ports-editor-section"><div class="ports-editor-header"><span data-i18n="ui.block_kit.outputs">Outputs</span><button class="ghost-btn {{ add_output_hidden }}" data-add-output-port type="button" {{ add_output_disabled }} data-i18n="ui.block_kit.add_output">+ Add an output</button></div><div class="ports-editor-list">{{ outputs_html }}</div></section>
+  </div>
+</div>

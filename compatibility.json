@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "kind": "jev",
+  "block_version": "0.1.0",
+  "maintained_by": "HackInvent",
+  "source": {
+    "algorithm": "block-source-v1",
+    "sha256": "f45e8af072b8d129e0a45b6c18aeff4fc535538782bb4d0b37ed7c3281f3e033"
+  },
+  "bloxsmith_compatibility": [
+    "1.0.9"
+  ],
+  "tested_with_bloxsmith": "1.0.9",
+  "validations": [
+    {
+      "bloxsmith_version": "1.0.9",
+      "framework_commit": "098a7091b501f41409f96e6b435c2e160ccee06d",
+      "framework_source_sha256": "c2c7196245389a0948a6b8c3ff0a98438acc912b16371d01819f4c0b9388bfc6",
+      "tested_at": "2026-09-22T22:15:03.585593+00:00",
+      "status": "passed",
+      "installation_mode": "bundled",
+      "suite_paths": [
+        "tests/F5.33_jev_block.py",
+        "tests/F8.33_jev_release_ui.py"
+      ],
+      "suite_count": 2,
+      "report_sha256": "355bef2969005d6ddc7e305ac054db2a8d537e31c9651633dbfaa82d63eafd08"
+    }
+  ]
+}

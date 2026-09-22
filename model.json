@@ -1,0 +1,111 @@
+{
+  "kind": "jev",
+  "version": "0.1.0",
+  "bloxsmith_compatibility": [
+    "1.0.9"
+  ],
+  "tested_with_bloxsmith": "1.0.9",
+  "title": "Jev",
+  "description": "Evaluates text or JSON with TypeSafe Jev and returns typed answers with probabilities.",
+  "locales": {
+    "en": "locales/en.json",
+    "fr": "locales/fr.json"
+  },
+  "ports": {
+    "inputs": [
+      {
+        "id": 1,
+        "name": "state",
+        "title": "State",
+        "accepts": [
+          "text/plain",
+          "application/json",
+          "message/*"
+        ],
+        "multiplicity": "one",
+        "required": true,
+        "execution_requirement": "required_for_execution"
+      }
+    ],
+    "outputs": [
+      {
+        "id": 1,
+        "name": "result",
+        "title": "Result",
+        "emits": [
+          "application/json"
+        ],
+        "multiplicity": "many"
+      }
+    ]
+  },
+  "config": {
+    "api_key_ref": "",
+    "model": "jev-latest",
+    "questions": {
+      "requires_action": {
+        "type": "noul",
+        "instructions": "Does the message ask someone to perform an action?"
+      }
+    },
+    "timeout_sec": 60,
+    "max_state_chars": 64000,
+    "max_retries": 2
+  },
+  "model_options": [
+    "jev-latest",
+    "jev-preview",
+    "jev-1.13.0"
+  ],
+  "port_capabilities": {
+    "can_add_inputs": false,
+    "can_add_outputs": false,
+    "allow_required_input": false,
+    "default_required": true
+  },
+  "runtime": {
+    "initial_state": "waiting",
+    "runtime_executable": true,
+    "active_worker": true,
+    "centralized_executor": "generic",
+    "centralized_dependency_mode": "all_inputs"
+  },
+  "ui_assets": {
+    "modal": [
+      {
+        "kind": "css",
+        "path": "assets/css/block_modal.css"
+      },
+      {
+        "kind": "js",
+        "path": "assets/js/block_modal.js"
+      },
+      {
+        "kind": "css",
+        "path": "assets/css/properties.css"
+      },
+      {
+        "kind": "js",
+        "path": "assets/js/properties.js"
+      }
+    ],
+    "inspector_panel": [
+      {
+        "kind": "css",
+        "path": "assets/css/block_modal.css"
+      },
+      {
+        "kind": "js",
+        "path": "assets/js/block_modal.js"
+      },
+      {
+        "kind": "css",
+        "path": "assets/css/properties.css"
+      },
+      {
+        "kind": "js",
+        "path": "assets/js/properties.js"
+      }
+    ]
+  }
+}
