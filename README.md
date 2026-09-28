@@ -15,8 +15,6 @@ Verified BloxSmith versions: **1.0.9** (bundled-block tests; see [test evidence]
 
 [![JEV — Evaluates structured questions and returns typed judgments with probabilities.](media/thumbnail.webp)](media/cover.png)
 
-*Concept illustration. [Artwork and generation prompt](media/README.md).*
-
 ## Quick start
 
 1. Obtain a TypeSafe API key and store it in the BloxSmith wallet.
